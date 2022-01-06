@@ -4,6 +4,8 @@ import random
 class Juego():
 
     def __init__(self): 
+        #El banco de preguntas sera un diccionario que contiene listas
+        #banco_preguntas  = { 1:[[pregunta,r1,r2,r3,r4,respusta],[pregunta,r1,r2,r3,r4,respusta] ], 2:[ etc.... ]}
         self.banco_preguntas = {1: [], 2: [], 3: [], 4: [], 5: []}
        
 
@@ -14,6 +16,7 @@ class Juego():
         print("          PREGUNTAS GUARDADAS           ")
         print("-----------------------------------------")
         for items, values in self.banco_preguntas.items():
+            #extramos los key del diccionario y los arrojamos en "items"
             print("######   Preguntas del nivel  {} ########".format(items)) 
 
             for preguntas in values:
@@ -23,6 +26,7 @@ class Juego():
 
 
     def configuracion(self):
+        #Menu para llamar a los metodos de esta clase. 
         print("-----------------------------------------")
         print("        MENU DE CONFIGURACION            ")
         print("-----------------------------------------")
@@ -42,6 +46,9 @@ class Juego():
 
 
     def ingresarPreguntasManualmente(self):
+        #Metodo para agregar preguntas
+        #Se agregaran las preguntas y respuestas a la lista y posteriormente se guardaran en el archivo de texto.
+        
         try:
             
             print("-----------------------------------------")
@@ -83,6 +90,8 @@ class Juego():
 
     def obtenerPreguntas(self, nivel):
         try:
+            #Existe la posibilidad de no tener preguntas de un nivel en el banco por lo que el programa se prepara para una excepcion.
+            #Obtenemos una pregunta aleatoria de un nivel especifico.
             pregunta = self.banco_preguntas[nivel][random.randint(0, len(self.banco_preguntas[nivel])-1)]
 
             while True:
@@ -105,7 +114,7 @@ class Juego():
                     
                     break
 
-        
+            #Aqui se evalua si la respuesta es correcta o incorrecta
             if pregunta[valida] == pregunta[5]:
                 print("[ Bien hecho! ] ")
                 return True
@@ -126,8 +135,10 @@ class Juego():
             self.banco_preguntas[int(p[0])].append(pregunta)
 
 
-
+    
     def cargarBancoPreguntas(self):
+        #Cargamos las preguntas y utilizamos split ";" para separarlas
+        
         try:
             archivo = open("preguntas/preguntas.txt").read().split("\n")
             for preguntas in archivo:

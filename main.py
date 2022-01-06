@@ -49,7 +49,7 @@ if __name__ == '__main__':
 
                 if resultado==False:    
                     
-                    print("[ EL JUEGO HA FINALIZADO. LA PREGUNTA NO ES CORRECTA ]")
+                    print("[ EL JUEGO HA FINALIZADO. LA RESPUESTA NO ES CORRECTA ]")
                     break
 
                 elif resultado==True: 

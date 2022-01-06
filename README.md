@@ -11,6 +11,6 @@
 
 
 ### Sobre la estrctura de los datos:
-- El banco de preguntas cargadas en memoria será un diccionario que contiene listas y cada una de estas listas contiene una lista de preguntas con sus respuestas y elemento a validar, así: banco_preguntas = { 1:[[pregunta,r1,r2,r3,r4,respuesta],[pregunta,r1,r2,r3,r4,respuesta] ], 2:[ etc.... ]}
+- El banco de preguntas cargadas en memoria es un diccionario que contiene listas y cada una de estas listas contiene una lista de preguntas con sus respuestas y elementos a validar, así: banco_preguntas = { 1:[[pregunta,r1,r2,r3,r4,respuesta],[pregunta,r1,r2,r3,r4,respuesta] ], 2:[ etc.... ]}
         
         

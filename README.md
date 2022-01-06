@@ -6,7 +6,7 @@
 
 ### Sobre el programa: 
 - El juego cuenta con 5 niveles de 1 al 5, siendo 1 el más sencillo y 5 el más difícil.
-- Se pueden agregar preguntas al banco desde el juego especificando el nivel de dificultad.
+- Se pueden agregar preguntas al banco desde el juego especificando el nivel de dificultad y conservando la estructura de los datos expuesta debajo.
 - La respuesta que se considere correcta debe escribirse como un número y no con caracteres.
 
 

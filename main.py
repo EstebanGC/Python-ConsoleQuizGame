@@ -45,6 +45,11 @@ if __name__ == '__main__':
         elif eleccion=="2":
             
             for rondas in range(1,6):
+                # cada ronda irá aumentando de 1 en 1 la dificultad del banco de preguntas de forma automatica.
+                # llamamos al juego a que nos arroje la pregunta y nos devulva unicamente 
+                # True   ---> si acierto 
+                # False  ---> si fallo 
+                # None   ---> si no hay preguntas de ese nivel  ( salta al proximo )
                 resultado = partidaPreguntas.obtenerPreguntas(rondas)
 
                 if resultado==False:    

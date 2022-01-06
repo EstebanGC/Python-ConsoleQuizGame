@@ -17,18 +17,19 @@ menu = """
 
 
 """
-
-
+         
 if __name__ == '__main__':
+    
     partidaPreguntas = juego.Juego()
     
     partidaPreguntas.cargarBancoPreguntas()
 
-    
     player  = jugador.Jugador()
     player.llenarInformacion()
 
-    
+    #Llamamos el juego e iteramos hasta que se anule una condicion
+    #El juego termina si el jugador gana el juego o falla en la primera pregunta
+
     onGame = True
 
 
